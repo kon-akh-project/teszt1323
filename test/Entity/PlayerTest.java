@@ -110,36 +110,6 @@ public class PlayerTest {
         
     }
 
-    @Test
-    public void testGetNextpositionDXLowerThenMaxSpeed() {
-        TileMap tileMap = new TileMap(50);
-        tileMap.setPosition(0, 0);
 
-        Player player = new Player(tileMap);
-
-        player.setRight(false);  
-        player.setLeft(false);  
-        player.setVector(1,1);
-        player.getNextPosition();
-        int expected=0;
-        int actual= player.getDX();
-        assertEquals(expected,actual);   
-    }
-
-    @Test
-     public void testGetNextpositionDXHigherThenMaxSpeed() {
-        TileMap tileMap = new TileMap(50);
-        tileMap.setPosition(0, 0);
-
-        Player player = new Player(tileMap);
-
-        player.setRight(false);  
-        player.setLeft(false);  
-        player.setVector(2,2);
-        player.getNextPosition();
-        int expected=1;
-        int actual= player.getDX();
-        assertEquals(expected,actual);   
-    }
     
 }

@@ -154,7 +154,7 @@ public class Player extends MapObject {
         gliding = b;
     }
 
-    private void getNextPosition() {
+    void getNextPosition() {
         //movement
         if (left) {
             dx -= moveSpeed;

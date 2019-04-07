@@ -136,7 +136,15 @@ public class Player extends MapObject {
  
     public boolean getFiring() {
         return firing;
-    }    
+    }   
+    
+    public boolean getScratching() {
+        return scratching;
+    }      
+    
+    public boolean getGliding() {
+        return gliding;
+    }   
 
     public void setScratching() {
         scratching = true;
@@ -351,4 +359,6 @@ public class Player extends MapObject {
 
         }
     }
+
+
 }

@@ -88,19 +88,32 @@ public class PlayerTest {
    
     @Test
     public void testSetScratching() {
+        TileMap tileMap = new TileMap(50);
+        tileMap.setPosition(0, 0);
+
+        Player player = new Player(tileMap);
+
+        player.setScratching();
+        assertTrue(player.getScratching());  
     }
 
     
     @Test
     public void testSetGliding() {
+        TileMap tileMap = new TileMap(50);
+        tileMap.setPosition(0, 0);
+
+        Player player = new Player(tileMap);
+
+        player.setGliding(true);
+        assertTrue(player.getGliding());          
+        
     }
 
     @Test
     public void testUpdate() {
     }
 
-    @Test
-    public void testDraw() {
-    }
+
     
 }

@@ -34,6 +34,12 @@
     </javac>
     <echo message="Build done" />
   </target>
+  
+  <target name="doc" depends="build" description="generate documentation">
+    <javadoc sourcepath="${basedir}/src" destdir="${doc.dir}"/>
+    <echo message="documentation done" />
+  </target>
+  
    
   <!-- Test and build all files  -->
   <!-- To run this: use "ant" (default) or "ant run" -->
@@ -62,11 +68,7 @@
   </target>
   
   
-  <target name="doc" depends="build" description="generate documentation">
-    <javadoc sourcepath="${basedir}/src" destdir="${doc.dir}"/>
-    <echo message="documentation done" />
-  </target>
-  
+
   
   
    

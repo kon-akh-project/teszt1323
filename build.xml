@@ -50,15 +50,6 @@
   </target>
   
  
-  <target name="findbugs" depends="jar">
-    <findbugs home="${findbugs.home}"
-              output="xml"
-              outputFile="bcel-fb.xml" >
-      <auxClasspath path="${basedir}/lib/Regex.jar" />
-      <sourcePath path="${basedir}/src" />
-      <class location="${basedir}/lib/bcel.jar" />
-    </findbugs>
-  </target>
    
   <!-- delete all class files -->
   <!-- To run this: use "ant clean" -->

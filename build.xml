@@ -1,4 +1,7 @@
 <?xml version="1.0"?>   
+
+<taskdef name="findbugs" classpath="lib\findbugs-ant.jar" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" />
+
 <project name="java-junit-template-project" default="test" basedir=".">
   <property name="main.build.dir" value="build/main" />  
   <property name="main.src.dir" value="src" />
@@ -47,7 +50,7 @@
     </junit>
   </target>
   
-  <taskdef name="findbugs" classpath="lib\findbugs-ant.jar" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" />
+ 
   <target name="findbugs" depends="jar">
     <findbugs home="${findbugs.home}"
               output="xml"

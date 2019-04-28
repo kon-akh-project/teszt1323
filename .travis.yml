@@ -9,7 +9,7 @@ jdk:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: gh_token
+  github_token: $GH_TOKEN
   keep_history: true
 on:
   branch: master

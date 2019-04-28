@@ -4,7 +4,7 @@
   <property name="main.src.dir" value="src" />
   <property name="test.build.dir" value="build/test" />
   <property name="test.src.dir" value="test" />
-  <property name="findbugs.home" value="lib/findbugs" />
+  <property name="findbugs.home" value="lib" />
 
   <path id="classpath.base" />
 
@@ -53,7 +53,7 @@
               output="xml"
               outputFile="bcel-fb.xml" >
       <auxClasspath path="${basedir}/lib/Regex.jar" />
-      <sourcePath path="${basedir}/src/" />
+      <sourcePath path="${basedir}/src" />
       <class location="${basedir}/lib/bcel.jar" />
     </findbugs>
   </target>

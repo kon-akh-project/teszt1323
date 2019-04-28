@@ -9,7 +9,8 @@ FindBugs
 
 Javadoc
 
-Results can be seen here : https://github.com/kon-akh-project/teszt1323/tree/gh-pages  (doc folder and findbugs_results.xml)
+Results can be seen here : https://github.com/kon-akh-project/teszt1323/tree/gh-pages 
+(doc folder and findbugs_results.xml)
 
 Build:
   - cd src

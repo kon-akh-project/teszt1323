@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1556492463273" analysisTimestamp="1556492463308" release="">
+  <Project projectName="">
+    <Jar>/home/travis/build/kon-akh-project/teszt1323/build</Jar>
+    <SrcDir>/home/travis/build/kon-akh-project/teszt1323/src/java</SrcDir>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="Entity.Animation">
+      <SourceLine classname="Entity.Animation"/>
+    </Class>
+    <Method classname="Entity.Animation" name="setFrames" signature="([Ljava/awt/image/BufferedImage;)V" isStatic="false">
+      <SourceLine classname="Entity.Animation"/>
+    </Method>
+    <Field classname="Entity.Animation" name="frames" signature="[Ljava/awt/image/BufferedImage;" isStatic="false">
+      <SourceLine classname="Entity.Animation"/>
+    </Field>
+    <LocalVariable name="?" register="1" pc="2" role="LOCAL_VARIABLE_UNKNOWN"/>
+    <SourceLine classname="Entity.Animation" startBytecode="2" endBytecode="2"/>
+  </BugInstance>
+  <BugInstance type="ICAST_IDIV_CAST_TO_DOUBLE" priority="2" rank="17" abbrev="ICAST" category="STYLE">
+    <Class classname="Entity.FireBall">
+      <SourceLine classname="Entity.FireBall"/>
+    </Class>
+    <Method classname="Entity.FireBall" name="draw" signature="(Ljava/awt/Graphics2D;)V" isStatic="false">
+      <SourceLine classname="Entity.FireBall"/>
+    </Method>
+    <SourceLine classname="Entity.FireBall" startBytecode="34" endBytecode="34"/>
+  </BugInstance>
+  <BugInstance type="ICAST_IDIV_CAST_TO_DOUBLE" priority="2" rank="17" abbrev="ICAST" category="STYLE">
+    <Class classname="Entity.MapObject">
+      <SourceLine classname="Entity.MapObject"/>
+    </Class>
+    <Method classname="Entity.MapObject" name="calculateCorners" signature="(DD)V" isStatic="false">
+      <SourceLine classname="Entity.MapObject"/>
+    </Method>
+    <SourceLine classname="Entity.MapObject" startBytecode="7" endBytecode="7"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="18" abbrev="UrF" category="STYLE">
+    <Class classname="Entity.MapObject">
+      <SourceLine classname="Entity.MapObject"/>
+    </Class>
+    <Field classname="Entity.MapObject" name="down" signature="Z" isStatic="false">
+      <SourceLine classname="Entity.MapObject"/>
+    </Field>
+    <SourceLine classname="Entity.MapObject" startBytecode="2" endBytecode="2"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="18" abbrev="UrF" category="STYLE">
+    <Class classname="Entity.MapObject">
+      <SourceLine classname="Entity.MapObject"/>
+    </Class>
+    <Field classname="Entity.MapObject" name="up" signature="Z" isStatic="false">
+      <SourceLine classname="Entity.MapObject"/>
+    </Field>
+    <SourceLine classname="Entity.MapObject" startBytecode="2" endBytecode="2"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE">
+    <Class classname="Entity.MapObject">
+      <SourceLine classname="Entity.MapObject"/>
+    </Class>
+    <Field classname="Entity.MapObject" name="previousAction" signature="I" isStatic="false">
+      <SourceLine classname="Entity.MapObject"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ICAST_IDIV_CAST_TO_DOUBLE" priority="2" rank="17" abbrev="ICAST" category="STYLE">
+    <Class classname="Entity.Player">
+      <SourceLine classname="Entity.Player"/>
+    </Class>
+    <Method classname="Entity.Player" name="draw" signature="(Ljava/awt/Graphics2D;)V" isStatic="false">
+      <SourceLine classname="Entity.Player"/>
+    </Method>
+    <SourceLine classname="Entity.Player" startBytecode="103" endBytecode="103"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="Entity.Player">
+      <SourceLine classname="Entity.Player"/>
+    </Class>
+    <Field classname="Entity.Player" name="fireBallDamage" signature="I" isStatic="false">
+      <SourceLine classname="Entity.Player"/>
+    </Field>
+    <SourceLine classname="Entity.Player" startBytecode="152" endBytecode="152"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="Entity.Player">
+      <SourceLine classname="Entity.Player"/>
+    </Class>
+    <Field classname="Entity.Player" name="scratchDamage" signature="I" isStatic="false">
+      <SourceLine classname="Entity.Player"/>
+    </Field>
+    <SourceLine classname="Entity.Player" startBytecode="169" endBytecode="169"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="Entity.Player">
+      <SourceLine classname="Entity.Player"/>
+    </Class>
+    <Field classname="Entity.Player" name="scratchRange" signature="I" isStatic="false">
+      <SourceLine classname="Entity.Player"/>
+    </Field>
+    <SourceLine classname="Entity.Player" startBytecode="175" endBytecode="175"/>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE">
+    <Class classname="Entity.Player">
+      <SourceLine classname="Entity.Player"/>
+    </Class>
+    <Field classname="Entity.Player" name="dead" signature="Z" isStatic="false">
+      <SourceLine classname="Entity.Player"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" rank="16" abbrev="Dm" category="BAD_PRACTICE">
+    <Class classname="GameState.MenuState">
+      <SourceLine classname="GameState.MenuState"/>
+    </Class>
+    <Method classname="GameState.MenuState" name="select" signature="()V" isStatic="false">
+      <SourceLine classname="GameState.MenuState"/>
+    </Method>
+    <SourceLine classname="GameState.MenuState" startBytecode="38" endBytecode="38"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N">
+    <Class classname="TileMap.TileMap">
+      <SourceLine classname="TileMap.TileMap"/>
+    </Class>
+    <Method classname="TileMap.TileMap" name="loadMap" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="TileMap.TileMap"/>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="108" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+    </Method>
+    <SourceLine classname="TileMap.TileMap" startBytecode="18" endBytecode="18"/>
+  </BugInstance>
+  <BugInstance type="NP_DEREFERENCE_OF_READLINE_VALUE" priority="2" rank="15" abbrev="NP" category="STYLE">
+    <Class classname="TileMap.TileMap">
+      <SourceLine classname="TileMap.TileMap"/>
+    </Class>
+    <Method classname="TileMap.TileMap" name="loadMap" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="TileMap.TileMap"/>
+    </Method>
+    <LocalVariable name="?" register="6" pc="113" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="TileMap.TileMap" startBytecode="115" endBytecode="115"/>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" rank="16" abbrev="OS" category="BAD_PRACTICE">
+    <Class classname="TileMap.TileMap">
+      <SourceLine classname="TileMap.TileMap"/>
+    </Class>
+    <Method classname="TileMap.TileMap" name="loadMap" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="TileMap.TileMap" startBytecode="0" endBytecode="83"/>
+    </Method>
+    <Type descriptor="Ljava/io/Reader;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.Reader" start="66" end="249" sourcefile="Reader.java" sourcepath="java/io/Reader.java"/>
+    </Type>
+    <SourceLine classname="TileMap.TileMap" startBytecode="9" endBytecode="9"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="1">
+    <MissingClass>org.junit.Assert</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 28 Apr 2019 23:01:03 +0000" total_classes="14" referenced_classes="292" total_bugs="15" total_size="808" num_packages="4" java_version="1.8.0_151" vm_version="25.151-b12" cpu_seconds="11.52" clock_seconds="5.92" peak_mbytes="272.37" alloc_mbytes="1662.50" gc_seconds="0.16" priority_2="14" priority_1="1">
+    <PackageStats package="Entity" total_bugs="11" total_types="5" total_size="478" priority_2="11">
+      <ClassStats class="Entity.Animation" sourceFile="&lt;Unknown&gt;" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="Entity.FireBall" sourceFile="&lt;Unknown&gt;" interface="false" size="56" bugs="1" priority_2="1"/>
+      <ClassStats class="Entity.MapObject" sourceFile="&lt;Unknown&gt;" interface="false" size="152" bugs="4" priority_2="4"/>
+      <ClassStats class="Entity.Player" sourceFile="&lt;Unknown&gt;" interface="false" size="205" bugs="5" priority_2="5"/>
+      <ClassStats class="Entity.PlayerTest" sourceFile="&lt;Unknown&gt;" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="GameState" total_bugs="1" total_types="4" total_size="125" priority_2="1">
+      <ClassStats class="GameState.GameState" sourceFile="&lt;Unknown&gt;" interface="false" size="8" bugs="0"/>
+      <ClassStats class="GameState.GameStateManager" sourceFile="&lt;Unknown&gt;" interface="false" size="26" bugs="0"/>
+      <ClassStats class="GameState.Level1State" sourceFile="&lt;Unknown&gt;" interface="false" size="42" bugs="0"/>
+      <ClassStats class="GameState.MenuState" sourceFile="&lt;Unknown&gt;" interface="false" size="49" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="Main" total_bugs="0" total_types="2" total_size="55">
+      <ClassStats class="Main.Game" sourceFile="&lt;Unknown&gt;" interface="false" size="7" bugs="0"/>
+      <ClassStats class="Main.GamePanel" sourceFile="&lt;Unknown&gt;" interface="false" size="48" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="TileMap" total_bugs="3" total_types="3" total_size="150" priority_2="2" priority_1="1">
+      <ClassStats class="TileMap.Background" sourceFile="&lt;Unknown&gt;" interface="false" size="30" bugs="0"/>
+      <ClassStats class="TileMap.Tile" sourceFile="&lt;Unknown&gt;" interface="false" size="10" bugs="0"/>
+      <ClassStats class="TileMap.TileMap" sourceFile="&lt;Unknown&gt;" interface="false" size="110" bugs="3" priority_2="2" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="915" invocations="1513" avgMicrosecondsPerInvocation="604" maxMicrosecondsPerInvocation="50152" standardDeviationMircosecondsPerInvocation="2422"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="546" invocations="1517" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="12363" standardDeviationMircosecondsPerInvocation="902"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="399" invocations="292" avgMicrosecondsPerInvocation="1367" maxMicrosecondsPerInvocation="18921" standardDeviationMircosecondsPerInvocation="2746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="380" invocations="292" avgMicrosecondsPerInvocation="1304" maxMicrosecondsPerInvocation="27117" standardDeviationMircosecondsPerInvocation="2763"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="297" invocations="726" avgMicrosecondsPerInvocation="409" maxMicrosecondsPerInvocation="15101" standardDeviationMircosecondsPerInvocation="966"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="185" invocations="359" avgMicrosecondsPerInvocation="516" maxMicrosecondsPerInvocation="48632" standardDeviationMircosecondsPerInvocation="2942"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="140" invocations="110" avgMicrosecondsPerInvocation="1279" maxMicrosecondsPerInvocation="27143" standardDeviationMircosecondsPerInvocation="3381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="136" invocations="116" avgMicrosecondsPerInvocation="1177" maxMicrosecondsPerInvocation="18606" standardDeviationMircosecondsPerInvocation="3060"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="132" invocations="1464" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="12956" standardDeviationMircosecondsPerInvocation="433"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="121" invocations="110" avgMicrosecondsPerInvocation="1102" maxMicrosecondsPerInvocation="32040" standardDeviationMircosecondsPerInvocation="3551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="117" invocations="292" avgMicrosecondsPerInvocation="400" maxMicrosecondsPerInvocation="16514" standardDeviationMircosecondsPerInvocation="1152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="112" invocations="292" avgMicrosecondsPerInvocation="384" maxMicrosecondsPerInvocation="12071" standardDeviationMircosecondsPerInvocation="971"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="106" invocations="110" avgMicrosecondsPerInvocation="965" maxMicrosecondsPerInvocation="12990" standardDeviationMircosecondsPerInvocation="2355"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="99" invocations="110" avgMicrosecondsPerInvocation="907" maxMicrosecondsPerInvocation="13681" standardDeviationMircosecondsPerInvocation="1978"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="95" invocations="292" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="9362" standardDeviationMircosecondsPerInvocation="1024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="84" invocations="292" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="17513" standardDeviationMircosecondsPerInvocation="1298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="77" invocations="110" avgMicrosecondsPerInvocation="703" maxMicrosecondsPerInvocation="13111" standardDeviationMircosecondsPerInvocation="1765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="76" invocations="292" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="14846" standardDeviationMircosecondsPerInvocation="1434"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

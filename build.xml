@@ -47,14 +47,14 @@
     </junit>
   </target>
   
-  <taskdef name="findbugs" classpath="lib\findbugsant\findbugs-ant.jar" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" />
+  <taskdef name="findbugs" classpath="lib\findbugs-ant.jar" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" />
   <target name="findbugs" depends="jar">
     <findbugs home="${findbugs.home}"
               output="xml"
               outputFile="bcel-fb.xml" >
       <auxClasspath path="${basedir}/lib/Regex.jar" />
-      <sourcePath path="${basedir}/src/java" />
-      <class location="${basedir}/bin/bcel.jar" />
+      <sourcePath path="${basedir}/src/" />
+      <class location="${basedir}/lib/bcel.jar" />
     </findbugs>
   </target>
    

@@ -56,7 +56,7 @@
               output="xml"
               outputFile="findbugs_results.xml" >
       <auxClasspath path="${basedir}/lib/junit-4.12.jar" />
-      <class location="${basedir}/src/Main/Game.jar" />
+      <class location="${basedir}/src/Main/Game.java" />
     </findbugs>
   </target>
   

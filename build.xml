@@ -7,8 +7,7 @@
   <property name="test.build.dir" value="build/test" />
   <property name="test.src.dir" value="test" />
   <property name="findbugs.home" value="findbugs" />
-  <property name="doc.dir" location="doc"/>
-  
+
   <path id="classpath.base" />
 
   <path id="classpath.test">
@@ -57,14 +56,11 @@
               output="xml"
               outputFile="findbugs_results.xml" >
       <auxClasspath path="${basedir}/lib/junit-4.12.jar" />
-      <sourcePath path="${basedir}/src/java" />
-      <class location="${basedir}/bin/bcel.jar" />
+      <class location="${basedir}/src/Main/Game.jar" />
     </findbugs>
   </target>
   
-  <target name="doc" depends="findbugs" description="generate documentation">
-    <javadoc sourcepath="${basedir}/src" destdir="${doc.dir}"/>
-  </target>
+  
   
   
   

@@ -4,13 +4,12 @@ addons:
     packages:
       - openjdk-6-jdk
 jdk:
-  - oraclejdk9
   - oraclejdk8
   - openjdk7
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $81b1448b6cb250a1f48561b8ef2433cb84b89554
+  github_token: 81b1448b6cb250a1f48561b8ef2433cb84b89554
   keep_history: true
 on:
   branch: master

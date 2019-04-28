@@ -1,7 +1,6 @@
 <?xml version="1.0"?>   
 
 <project name="java-junit-template-project" default="test" basedir=".">
-  <taskdef name="findbugs" classpath="lib\findbugs-ant.jar" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" />
   
   <property name="main.build.dir" value="build/main" />  
   <property name="main.src.dir" value="src" />

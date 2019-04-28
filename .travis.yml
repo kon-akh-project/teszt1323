@@ -9,7 +9,7 @@ jdk:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  github_token: azt sem tudom miről van szó
   keep_history: true
 on:
   branch: master

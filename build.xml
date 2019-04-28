@@ -57,7 +57,7 @@
               output="xml"
               outputFile="findbugs_results.xml" >
      <sourcePath path="${basedir}/src/java" />
-     <class location="${basedir}/build/main" />
+     <class location="${basedir}/build" />
     </findbugs>
   </target>
   

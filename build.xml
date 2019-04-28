@@ -57,6 +57,7 @@
               outputFile="findbugs_results.xml" >
       <auxClasspath path="${basedir}/lib/junit-4.12.jar" />
       <sourcePath path="${basedir}/src/java" />
+      <class location="${basedir}/bin/bcel.jar" />
     </findbugs>
   </target>
   

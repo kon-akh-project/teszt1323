@@ -18,7 +18,7 @@
     <path refid="classpath.base" />
   </path>
 
-  <target name="test" depends="run, findbugs,clean " />
+  <target name="test" depends="run, findbugs,doc,clean " />
 
   <target name="compile">
     <mkdir dir="${main.build.dir}"/>

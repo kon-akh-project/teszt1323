@@ -47,7 +47,7 @@
     </junit>
   </target>
   
-  
+  <taskdef name="findbugs" classpath="lib\findbugsant\findbugs-ant.jar" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" />
   <target name="findbugs" depends="jar">
     <findbugs home="${findbugs.home}"
               output="xml"

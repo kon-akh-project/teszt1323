@@ -55,7 +55,7 @@
     <findbugs home="${findbugs.home}"
               output="xml"
               outputFile="findbugs_results.xml" >
-      <auxClasspath path="${basedir}/lib/Regex.jar" />
+      <auxClasspath path="/lib/junit-4.12.jar" />
       <sourcePath path="${basedir}/src" />
       <class location="${basedir}/bin/bcel.jar" />
     </findbugs>

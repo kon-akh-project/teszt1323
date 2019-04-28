@@ -4,8 +4,8 @@
   <property name="main.src.dir" value="src" />
   <property name="test.build.dir" value="build/test" />
   <property name="test.src.dir" value="test" />
-  <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
-  
+  <property name="findbugs.home" value="lib/findbugs" />
+
   <path id="classpath.base" />
 
   <path id="classpath.test">
@@ -47,8 +47,7 @@
     </junit>
   </target>
   
-  <property name="findbugs.home" value="/export/home/daveho/work/findbugs" />
-
+  
   <target name="findbugs" depends="jar">
     <findbugs home="${findbugs.home}"
               output="xml"

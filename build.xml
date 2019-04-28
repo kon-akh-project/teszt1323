@@ -4,7 +4,8 @@
   <property name="main.src.dir" value="src" />
   <property name="test.build.dir" value="build/test" />
   <property name="test.src.dir" value="test" />
-
+  <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
+  
   <path id="classpath.base" />
 
   <path id="classpath.test">
@@ -44,6 +45,18 @@
             <fileset dir="${test.src.dir}" includes="**/*Test*.java" />
         </batchtest>
     </junit>
+  </target>
+  
+  <property name="findbugs.home" value="/export/home/daveho/work/findbugs" />
+
+  <target name="findbugs" depends="jar">
+    <findbugs home="${findbugs.home}"
+              output="xml"
+              outputFile="bcel-fb.xml" >
+      <auxClasspath path="${basedir}/lib/Regex.jar" />
+      <sourcePath path="${basedir}/src/java" />
+      <class location="${basedir}/bin/bcel.jar" />
+    </findbugs>
   </target>
    
   <!-- delete all class files -->

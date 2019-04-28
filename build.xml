@@ -65,12 +65,7 @@
      <sourcePath path="${basedir}/src/java" />
      <class location="${basedir}/build" />
     </findbugs>
-  </target>
-  
-  
-
-  
-  
+  </target>  
    
   <!-- delete all class files -->
   <!-- To run this: use "ant clean" -->

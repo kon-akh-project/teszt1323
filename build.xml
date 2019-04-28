@@ -7,7 +7,7 @@
   <property name="test.build.dir" value="build/test" />
   <property name="test.src.dir" value="test" />
   <property name="findbugs.home" value="findbugs" />
-  <property name="doc.dir" location="doc"/>
+  <property name="doc.dir" value="doc"/>
   
   <path id="classpath.base" />
 

@@ -62,7 +62,7 @@
   </target>
   
   
-  <target name="doc" depends="findbugs" description="generate documentation">
+  <target name="doc" depends="build" description="generate documentation">
     <javadoc sourcepath="${basedir}/src" destdir="${doc.dir}"/>
     <echo message="documentation done" />
   </target>

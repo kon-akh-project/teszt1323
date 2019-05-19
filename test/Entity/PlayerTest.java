@@ -16,7 +16,5 @@ import static org.junit.Assert.*;
  * @author Krisztian
  */
 public class PlayerTest {
-    
-    public PlayerTest() {
-    }
+
 }

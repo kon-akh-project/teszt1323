@@ -26,7 +26,7 @@ public class PlayerTest {
         TileMap tileMap = new TileMap(50);
         tileMap.setPosition(0, 0);
 
-        Player player = new Player(tileMap);
+        Player player = new Player(tileMap, true);
         
         int actual = player.getHealth();
         int expected = 5;
@@ -39,7 +39,7 @@ public class PlayerTest {
         TileMap tileMap = new TileMap(50);
         tileMap.setPosition(0, 0);
 
-        Player player = new Player(tileMap);
+        Player player = new Player(tileMap, true);
         
         int actual = player.getMaxHealth();
         int expected = 5;
@@ -52,7 +52,7 @@ public class PlayerTest {
         TileMap tileMap = new TileMap(50);
         tileMap.setPosition(0, 0);
 
-        Player player = new Player(tileMap);
+        Player player = new Player(tileMap, true);
         
         int actual = player.getFire();
         int expected = 2500;
@@ -65,7 +65,7 @@ public class PlayerTest {
         TileMap tileMap = new TileMap(50);
         tileMap.setPosition(0, 0);
 
-        Player player = new Player(tileMap);
+        Player player = new Player(tileMap, true);
         
         int actual = player.getMaxFire();
         int expected = 2500;
@@ -78,7 +78,7 @@ public class PlayerTest {
         TileMap tileMap = new TileMap(50);
         tileMap.setPosition(0, 0);
 
-        Player player = new Player(tileMap);
+        Player player = new Player(tileMap, true);
         
         player.setFiring();
         int expected = 2500;
@@ -91,7 +91,7 @@ public class PlayerTest {
         TileMap tileMap = new TileMap(50);
         tileMap.setPosition(0, 0);
 
-        Player player = new Player(tileMap);
+        Player player = new Player(tileMap, true);
 
         player.setScratching();
         assertTrue(player.getScratching());  
@@ -103,7 +103,7 @@ public class PlayerTest {
         TileMap tileMap = new TileMap(50);
         tileMap.setPosition(0, 0);
 
-        Player player = new Player(tileMap);
+        Player player = new Player(tileMap, true);
 
         player.setGliding(true);
         assertTrue(player.getGliding());          

@@ -1,20 +1,47 @@
+@@ -1,32 +1,32 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package Entity;
-
 import TileMap.*;
 import Entity.Player;
-
 import org.junit.Test;
 import static org.junit.Assert.*;
-
 /**
  *
  * @author Krisztian
  */
 public class PlayerTest {
+    
+    public PlayerTest() {
+    }
+    
+    @Test
+    public void testGetHealth() {
+        TileMap tileMap = new TileMap(50);
+        tileMap.setPosition(0, 0);
 
+        Player player = new Player(tileMap);
+        Player player = new Player(tileMap, true);
+
+        int actual = player.getHealth();
+        int expected = 5;
+        assertEquals(expected,actual);
+    }
+    
+    @Test
+    public void testGetMaxHealth() {
+        TileMap tileMap = new TileMap(50);
+        tileMap.setPosition(0, 0);
+
+        Player player = new Player(tileMap);
+        Player player = new Player(tileMap, true);
+
+        int actual = player.getMaxHealth();
+        int expected = 5;
+        assertEquals(expected,actual);        
+    }
+    
 }

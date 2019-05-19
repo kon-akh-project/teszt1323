@@ -126,10 +126,18 @@ public class Player extends MapObject {
     public int getMaxFire() {
         return maxFire;
     }
+    
+    public boolean getFiring() {
+        return firing;
+    }
+    
 
     public void setFiring() {
         firing = true;
     }
+    
+    
+    
 
     public void setScratching() {
         scratching = true;

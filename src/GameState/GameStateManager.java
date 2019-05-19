@@ -20,6 +20,9 @@ public class GameStateManager {
         gameStates.add(new MenuState(this));
         gameStates.add(new Level1State(this));
        gameStates.add(new Multiplayerpre(this));
+       gameStates.add(new MultiServer(this));
+       gameStates.add(new MultiClient(this));
+       
     }
     
     public void setState(int state)

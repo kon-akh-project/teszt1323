@@ -1,4 +1,4 @@
-@@ -1,32 +1,32 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -23,7 +23,6 @@ public class PlayerTest {
         TileMap tileMap = new TileMap(50);
         tileMap.setPosition(0, 0);
 
-        Player player = new Player(tileMap);
         Player player = new Player(tileMap, true);
 
         int actual = player.getHealth();
@@ -36,7 +35,6 @@ public class PlayerTest {
         TileMap tileMap = new TileMap(50);
         tileMap.setPosition(0, 0);
 
-        Player player = new Player(tileMap);
         Player player = new Player(tileMap, true);
 
         int actual = player.getMaxHealth();

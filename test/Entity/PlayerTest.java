@@ -17,29 +17,4 @@ public class PlayerTest {
     
     public PlayerTest() {
     }
-    
-    @Test
-    public void testGetHealth() {
-        TileMap tileMap = new TileMap(50);
-        tileMap.setPosition(0, 0);
-
-        Player player = new Player(tileMap, true);
-
-        int actual = player.getHealth();
-        int expected = 5;
-        assertEquals(expected,actual);
-    }
-    
-    @Test
-    public void testGetMaxHealth() {
-        TileMap tileMap = new TileMap(50);
-        tileMap.setPosition(0, 0);
-
-        Player player = new Player(tileMap, true);
-
-        int actual = player.getMaxHealth();
-        int expected = 5;
-        assertEquals(expected,actual);        
-    }
-    
 }

@@ -46,7 +46,7 @@ public class Player extends MapObject {
     private static final int FIREBALL = 5;
     private static final int SCRATCHING = 6;
 
-    public Player(TileMap tm) {
+    public Player(TileMap tm,boolean facing) {
         super(tm);
         width = 30;
         height = 30;
@@ -61,7 +61,7 @@ public class Player extends MapObject {
         jumpStart = -4.8;
         stopJumpSpeed = 0.3;
 
-        facingRight = true;
+        facingRight = facing;
         health = maxHealth = 5;
         fire = maxFire = 2500;
 
@@ -155,7 +155,7 @@ public class Player extends MapObject {
                 }
             }
         }
-        else{
+        if(scratching){
             if (player.getx() < x 
                     
                             && player.getx() > x - scratchRange &&
@@ -198,6 +198,21 @@ public class Player extends MapObject {
         
         
     }
+    
+    public boolean fellDown()
+    {
+        if(this.gety()>600)
+        {
+            hit(); 
+            return true;
+        }
+            
+        return false;
+    }
+    
+    
+    
+    
     
     private void getNextPosition() {
         //movement

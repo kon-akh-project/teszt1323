@@ -31,7 +31,7 @@ public class MenuState extends GameState {
             bg = new Background("/Res/Backgrounds/menubgnagy.gif",1);
             bg.setVector(-0.1, 0);
             
-            titleColor = new Color(128,0,0);
+            titleColor = new Color(0,0,0);
             titleFont = new Font("Century Gothic",Font.PLAIN,72);
              font = new Font("Arial",Font.PLAIN,30);
         }catch(Exception e)
@@ -60,11 +60,11 @@ public class MenuState extends GameState {
     {
         if(i == currentChoice)
         {
-            g.setColor(Color.BLACK);
+            g.setColor(Color.RED);
             
         }else
         {
-            g.setColor(Color.RED);
+            g.setColor(Color.BLACK);
         }
         g.drawString(options[i],640,400+i*30);
         
@@ -83,6 +83,7 @@ public class MenuState extends GameState {
         else if(currentChoice == 1)
          {
              
+             gsm.setState(GameStateManager.MULTIPLAYERPRE);
              
          }
        else if(currentChoice == 2)

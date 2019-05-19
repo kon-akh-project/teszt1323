@@ -32,10 +32,10 @@ public class Level1State extends GameState {
         tileMap.loadMap("/Res/Maps/ezaz.map");
         tileMap.setPosition(0, 0);
 
-        player = new Player(tileMap);
+        player = new Player(tileMap,true);
         player.setPosition(100, 530);
 
-        player2 = new Player(tileMap);
+        player2 = new Player(tileMap,false);
         player2.setPosition(1200, 530);
 
         hud = new HUD(player, player2);
@@ -45,6 +45,15 @@ public class Level1State extends GameState {
 
     public void update() {
 
+        
+        
+        if(player.fellDown())
+             player.setPosition(100, 530);
+        
+        if(player2.fellDown())
+            player2.setPosition(1200, 530);
+        
+        
         player.update();
         player2.update();
 
@@ -67,6 +76,13 @@ public class Level1State extends GameState {
     }
 
     public void keyPressed(int k) {
+        
+        
+        
+        if(k == KeyEvent.VK_ESCAPE)
+        {
+            gsm.setState(GameStateManager.MENUSTATE);
+        }
 
         //player1
         if (k == KeyEvent.VK_A) {

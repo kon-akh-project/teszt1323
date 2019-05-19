@@ -9,7 +9,7 @@ jdk:
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
-  file: "FILE TO UPLOAD"
+  file: *.class
   skip_cleanup: true
   on:
     branch: master

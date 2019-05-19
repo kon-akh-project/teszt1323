@@ -168,10 +168,6 @@ public abstract class MapObject {
     public int getx() {
         return (int) x;
     }
-    
-    public int getDX() {
-        return (int) dx;
-    }
 
     public int gety() {
         return (int) y;

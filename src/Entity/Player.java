@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Entity;
 
 import TileMap.*;
@@ -31,6 +26,10 @@ public class Player extends MapObject {
     private int scratchRange;
 
     private boolean gliding;
+    
+    
+    
+    
 
     //animation
     private ArrayList<BufferedImage[]> sprites;
@@ -69,8 +68,7 @@ public class Player extends MapObject {
         fireCost = 200;
         fireBallDamage = 5;
         fireBalls = new ArrayList<FireBall>();
-        
-        
+
         scratchDamage = 8;
         scratchRange = 40;
 
@@ -84,7 +82,7 @@ public class Player extends MapObject {
             for (int i = 0; i < 7; i++) {
                 BufferedImage[] bi = new BufferedImage[numFrames[i]];
                 for (int j = 0; j < numFrames[i]; j++) {
-                    
+
                     if (i != 6) {
                         bi[j] = spritesheet.getSubimage(
                                 j * width,
@@ -104,12 +102,11 @@ public class Player extends MapObject {
                 sprites.add(bi);
             }
         } catch (Exception e) {
-            //e.printStackTrace();
+            e.printStackTrace();
         }
         animation = new Animation();
         currentAction = IDLE;
-        if(sprites != null)
-            animation.setFrames(sprites.get(IDLE));
+        animation.setFrames(sprites.get(IDLE));
         animation.setDelay(400);
 
     }
@@ -133,18 +130,6 @@ public class Player extends MapObject {
     public void setFiring() {
         firing = true;
     }
- 
-    public boolean getFiring() {
-        return firing;
-    }   
-    
-    public boolean getScratching() {
-        return scratching;
-    }      
-    
-    public boolean getGliding() {
-        return gliding;
-    }   
 
     public void setScratching() {
         scratching = true;
@@ -154,7 +139,67 @@ public class Player extends MapObject {
         gliding = b;
     }
 
-    void getNextPosition() {
+    public void checkAttack(Player player) {
+        // scratch
+        if (scratching) {
+            if (facingRight) {
+                if (player.getx() > x 
+                    
+                            && player.getx() < x + scratchRange &&
+                        player.gety() > y - height/2 &&
+                        player.gety() < y + height/2
+                        ){
+                    player.hit();
+                    
+            
+                }
+            }
+        }
+        else{
+            if (player.getx() < x 
+                    
+                            && player.getx() > x - scratchRange &&
+                        player.gety() > y - height/2 &&
+                        player.gety() < y + height/2
+                        ){
+                    player.hit();
+                    
+            
+                }
+            
+            
+        }
+
+        
+        for(int i =0; i < fireBalls.size();++i)
+        {
+            if(fireBalls.get(i).intersects(player))
+            {
+                player.hit();
+                fireBalls.get(i).setHit();
+                break;
+            }
+            
+            
+            
+        }
+        
+    }
+
+    
+    public void hit()
+    {
+        if(flinching) return;
+        health--;
+        if(health<0) health = 0;
+        if(health==0) dead= true;
+        flinching= true;
+        flinchTimer = System.nanoTime();
+        
+        
+    }
+    
+    private void getNextPosition() {
         //movement
         if (left) {
             dx -= moveSpeed;
@@ -219,49 +264,55 @@ public class Player extends MapObject {
         setPosition(xtemp, ytemp);
 
         //attack stopped
-        if(currentAction == SCRATCHING)
-        {
-            if(animation.hasPlayedOnce()) scratching = false;
-            
+        if (currentAction == SCRATCHING) {
+            if (animation.hasPlayedOnce()) {
+                scratching = false;
+            }
+
         }
-        
-        if(currentAction == FIREBALL) {
-			if(animation.hasPlayedOnce()) firing = false;
-		}
-        
-        
+
+        if (currentAction == FIREBALL) {
+            if (animation.hasPlayedOnce()) {
+                firing = false;
+            }
+        }
+
         //fireball
-        
-        fire +=1;
-        if(fire > maxFire) fire = maxFire;
-        if(firing && currentAction != FIREBALL)
-        {
-            if(fire > fireCost)
-            {
+        fire += 1;
+        if (fire > maxFire) {
+            fire = maxFire;
+        }
+        if (firing && currentAction != FIREBALL) {
+            if (fire > fireCost) {
                 fire -= fireCost;
-                FireBall fb = new FireBall(tileMap,facingRight);
+                FireBall fb = new FireBall(tileMap, facingRight);
                 fb.setPosition(x, y);
-                
+
                 fireBalls.add(fb);
             }
-            
+
         }
         //update fire
-        for(int i =0; i < fireBalls.size();++i)
-        {
+        for (int i = 0; i < fireBalls.size(); ++i) {
             fireBalls.get(i).update();
-            if(fireBalls.get(i).shouldRemove())
-            {
+            if (fireBalls.get(i).shouldRemove()) {
                 fireBalls.remove(i);
                 i--;
             }
         }
         
+        //flinch
+        if(flinching)
+        {
+            long elapsed = (System.nanoTime() - flinchTimer) / 1000000;
+            if (elapsed >1000)
+                flinching = false;
+            
+        }
         
         
         
-        
-        
+
         //set animation
         if (scratching) {
             if (currentAction != SCRATCHING) {
@@ -335,13 +386,10 @@ public class Player extends MapObject {
         setMapPosition();
 
         //fireballs
-        for(int i = 0; i < fireBalls.size();++i)
-        {
+        for (int i = 0; i < fireBalls.size(); ++i) {
             fireBalls.get(i).draw(g);
         }
-        
-        
-        
+
         if (flinching) {
 
             long elapsed = (System.nanoTime() - flinchTimer) / 1000000;
@@ -351,14 +399,12 @@ public class Player extends MapObject {
         }
         if (facingRight) {
             g.drawImage(animation.getImage(), (int) (x + xmap - width / 2),
-                     (int) (y + ymap - height / 2), null);
+                    (int) (y + ymap - height / 2), null);
 
         } else {
             g.drawImage(animation.getImage(), (int) (x + xmap - width / 2 + width),
-                     (int) (y + ymap - height / 2), -width, height, null);
+                    (int) (y + ymap - height / 2), -width, height, null);
 
         }
     }
-
-
 }

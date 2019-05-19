@@ -85,31 +85,5 @@ public class PlayerTest {
         assertTrue(player.getFiring());         
     }
 
-   
-    @Test
-    public void testSetScratching() {
-        TileMap tileMap = new TileMap(50);
-        tileMap.setPosition(0, 0);
-
-        Player player = new Player(tileMap, true);
-
-        player.setScratching();
-        assertTrue(player.getScratching());  
-    }
-
-    
-    @Test
-    public void testSetGliding() {
-        TileMap tileMap = new TileMap(50);
-        tileMap.setPosition(0, 0);
-
-        Player player = new Player(tileMap, true);
-
-        player.setGliding(true);
-        assertTrue(player.getGliding());          
-        
-    }
-
-
     
 }

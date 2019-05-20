@@ -1,5 +1,5 @@
 # Kon-Akh
-Kon Akh is a groundbraking platformer game set to be released at the end of this semester.
+You can play the game using the Kon-Akh.jar file here: https://github.com/kon-akh-project/teszt1323/tree/master/bin
 
 The goal is to take down the other player with your melee and ranged attacks. You are able to jump and glide.
 After someone won, the game restarts itself after 5 seconds. To get back to the menu press escape anytime.

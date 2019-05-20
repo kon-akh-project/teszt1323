@@ -3,14 +3,12 @@ You can play the game using the Kon-Akh.jar file here: https://github.com/kon-ak
 
 The goal is to take down the other player with your melee and ranged attacks. You are able to jump and glide.
 After someone won, the game restarts itself after 5 seconds. To get back to the menu press escape anytime.
-
-Local game is fully working.
-Multiplayer is still in development.
-
-Controls can be found in the game.
-
-
-
+Currently available functions:
+  -Menu (with Controls help)
+  -Local 1v1 gamemode
+Future goals:
+  -Online multiplayer gamemode
+  -More versatile action/movement elements
 
 
 

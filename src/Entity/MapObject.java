@@ -4,9 +4,10 @@ import Main.GamePanel;
 import TileMap.Tile;
 import TileMap.TileMap;
 import java.awt.Rectangle;
+import java.io.Serializable;
 
 
-public abstract class MapObject {
+public abstract class MapObject implements Serializable {
 
     protected TileMap tileMap;
     protected int tileSize;

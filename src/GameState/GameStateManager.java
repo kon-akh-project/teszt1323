@@ -10,7 +10,8 @@ public class GameStateManager {
     public static final int LEVEL1STATE = 1;
     public static final int MULTIPLAYERPRE = 2;
     public static final int MULTISERVER = 3;
-    public static final int MULTICLIENT = 4;
+    public static final int MULTICLIENT = 4; 
+     public static final int HELP = 5;
     
     public GameStateManager()
     {
@@ -22,7 +23,7 @@ public class GameStateManager {
        gameStates.add(new Multiplayerpre(this));
        gameStates.add(new MultiServer(this));
        gameStates.add(new MultiClient(this));
-       
+       gameStates.add(new Help(this));
     }
     
     public void setState(int state)

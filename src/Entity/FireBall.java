@@ -22,15 +22,15 @@ public class FireBall extends MapObject{
         else dx = -moveSpeed;
         
         
-        width = 30;
-        height =30;
+        width = 50;
+        height =50;
         cwidth = 14;
         cheight = 14;
         
         try{
         
             BufferedImage spritesheet = ImageIO.read(
-            getClass().getResourceAsStream("/Res/Sprites/Player/fireball.gif")
+            getClass().getResourceAsStream("/Res/Sprites/Player/tornado.gif")
             
             );
             sprites = new BufferedImage[4];

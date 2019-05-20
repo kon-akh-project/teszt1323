@@ -12,7 +12,7 @@ public class MenuState extends GameState {
     
     private int currentChoice = 0;
     private String[] options = {
-        "Local", "Online","Help","Exit"
+        "Local", "Online (not working)","Help","Exit"
         
         
     };
@@ -52,7 +52,7 @@ public class MenuState extends GameState {
     
     g.setColor(titleColor);
     g.setFont(titleFont);
-    g.drawString("Nagyon jo jatek",400,100);
+    g.drawString("KON-AKH",500,100);
     
     
     g.setFont(font);
@@ -85,8 +85,17 @@ public class MenuState extends GameState {
              
              gsm.setState(GameStateManager.MULTIPLAYERPRE);
              
+         }else if(currentChoice == 2)
+         {
+             
+             gsm.setState(GameStateManager.HELP);
+             
          }
-       else if(currentChoice == 2)
+        
+        
+        
+        
+       else if(currentChoice == 3)
          {
              
              System.exit(0);

@@ -69,8 +69,12 @@ public class Multiplayerpre extends MenuState {
 
     private void select() {
         if (currentChoice == 0) {
+            
+            gsm.setState(GameStateManager.MULTISERVER);
 
         } else if (currentChoice == 1) {
+            
+            gsm.setState(GameStateManager.MULTICLIENT);
 
         } else if (currentChoice == 2) {
 
